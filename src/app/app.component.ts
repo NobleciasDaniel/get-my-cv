@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Injector} from '@angular/core';
+import { createCustomElement } from '@angular/elements';
 
 @Component({
   selector: 'noda-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'get-my-cv';
+  public showInfo: boolean = false;
+  public title = 'get-my-cv';
+
+  constructor(
+    private injector: Injector,
+  ) {
+
+  }
+
 }
